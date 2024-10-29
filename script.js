@@ -21,6 +21,10 @@ document.getElementById("submit-button").addEventListener("click", function () {
   } else {
     document.getElementsByClassName("sign-up-form-container")[0].style.display =
       "none";
+    document
+      .getElementsByClassName("email-input-container")[0]
+      .classList.remove("error");
+    document.getElementsByClassName("error-msg")[0].style.display = "none";
     document.getElementById("success-msg").style.display = "flex";
     document.getElementById("success-msg").style.animation =
       "bounce 1s ease forwards";
@@ -34,4 +38,5 @@ document
     document.getElementsByClassName("sign-up-form-container")[0].style.display =
       "flex";
     document.getElementById("success-msg").style.display = "none";
+    document.getElementById("email-input").value = "";
   });
